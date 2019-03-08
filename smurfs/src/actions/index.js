@@ -47,3 +47,7 @@ export const addSmurf = smurf => dispatch => {
 			});
 		});
 };
+
+export const DELETE_SMURF_START = "DELETE_SMURF_START";
+export const DELETE_SMURF_SUCCESS = "DELETE_SMURF_SUCCESS";
+export const DELETE_SMURF_FAILURE = "DELETE_SMURF_FAILURE";
