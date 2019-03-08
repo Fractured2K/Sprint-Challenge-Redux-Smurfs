@@ -1,0 +1,24 @@
+.smurf {
+	background: #005073;
+	width: 300px;
+	padding: 30px 0;
+	color: #fff;
+	margin: 10px;
+	border-radius: 10px;
+	box-shadow: 2px 4px 48px -7px rgba(0, 0, 0, 0.34);
+}
+
+.smurf button {
+	border: 1px solid #71c7ec;
+	border-radius: 10px;
+	color: #fff;
+	font-size: 16px;
+	background: transparent;
+	padding: 10px 40px;
+	transition: 0.2s ease-in-out;
+}
+
+.smurf button:hover {
+	background: #71c7ec;
+	cursor: pointer;
+}

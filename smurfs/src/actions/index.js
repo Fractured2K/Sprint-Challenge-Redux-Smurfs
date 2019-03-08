@@ -32,7 +32,7 @@ export const addSmurf = smurf => dispatch => {
 		type: ADD_SMURF_START
 	});
 
-	axios
+	return axios
 		.post("http://localhost:3333/smurfs", smurf)
 		.then(res => {
 			dispatch({

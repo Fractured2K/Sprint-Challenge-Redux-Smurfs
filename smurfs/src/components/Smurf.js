@@ -3,6 +3,8 @@ import { connect } from "react-redux";
 
 import { deleteSmurf } from "../actions";
 
+import "./Smurf.css";
+
 class Smurf extends Component {
 	deleteSmurf = () => {
 		this.props.deleteSmurf(this.props.smurf.id);
@@ -10,10 +12,14 @@ class Smurf extends Component {
 
 	render() {
 		return (
-			<div>
+			<div className="smurf">
 				<h1>{this.props.smurf.name}</h1>
-				<p>{this.props.smurf.age}</p>
-				<p>{this.props.smurf.height}</p>
+				<p>
+					Age: <strong>{this.props.smurf.age}</strong>
+				</p>
+				<p>
+					Height: <strong>{this.props.smurf.height}</strong>
+				</p>
 				<button onClick={this.deleteSmurf}>Delete</button>
 			</div>
 		);
