@@ -1,7 +1,10 @@
 import {
 	GET_SMURF_START,
 	GET_SMURF_SUCCESS,
-	GET_SMURF_FAILURE
+	GET_SMURF_FAILURE,
+	ADD_SMURF_START,
+	ADD_SMURF_SUCCESS,
+	ADD_SMURF_FAILURE
 } from "../actions";
 
 const initialState = {
@@ -29,6 +32,25 @@ export default (state = initialState, action) => {
 				error: null
 			};
 		case GET_SMURF_FAILURE:
+			return {
+				...state,
+				fetchingSmurfs: false,
+				error: action.payload
+			};
+		case ADD_SMURF_START:
+			return {
+				...state,
+				fetchingSmurfs: true,
+				error: null
+			};
+		case ADD_SMURF_SUCCESS:
+			return {
+				...state,
+				smurfs: [...state.smurfs, action.payload],
+				fetchingSmurfs: false,
+				error: null
+			};
+		case ADD_SMURF_FAILURE:
 			return {
 				...state,
 				fetchingSmurfs: false,
