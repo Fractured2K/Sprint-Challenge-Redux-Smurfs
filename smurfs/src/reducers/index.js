@@ -15,6 +15,25 @@ const initialState = {
 
 export default (state = initialState, action) => {
 	switch (action.type) {
+		case GET_SMURF_START:
+			return {
+				...state,
+				fetchingSmurfs: true,
+				error: null
+			};
+		case GET_SMURF_SUCCESS:
+			return {
+				...state,
+				smurfs: action.payload,
+				fetchingSmurfs: false,
+				error: null
+			};
+		case GET_SMURF_FAILURE:
+			return {
+				...state,
+				fetchingSmurfs: false,
+				error: action.payload
+			};
 		default:
 			return state;
 	}
