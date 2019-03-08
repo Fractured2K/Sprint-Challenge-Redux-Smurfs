@@ -5,7 +5,7 @@ import { deleteSmurf } from "../actions";
 
 class Smurf extends Component {
 	deleteSmurf = () => {
-		console.log(this.props.smurf.id);
+		this.props.deleteSmurf(this.props.smurf.id);
 	};
 
 	render() {
