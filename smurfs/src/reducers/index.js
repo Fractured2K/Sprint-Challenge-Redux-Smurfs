@@ -46,7 +46,7 @@ export default (state = initialState, action) => {
 		case ADD_SMURF_SUCCESS:
 			return {
 				...state,
-				smurfs: [...state.smurfs, action.payload],
+				smurfs: [...action.payload],
 				fetchingSmurfs: false,
 				error: null
 			};
